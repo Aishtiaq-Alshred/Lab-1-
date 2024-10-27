@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-        Scanner input=new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
         // sol-1
         System.out.println("enter the frist number");
@@ -109,7 +109,7 @@ public class Main {
         System.out.println("Area is " + width + " * " + height + " = " + areaa);
         System.out.println("Perimeter is 2 * (" + width + " + " + height + ") = " + perimeterr);
 
-   // sol-11 ناقص
+//   // sol-11
         System.out.println("Input Data: ");
         System.out.println("Input first integer:");
         int numberfrist= input.nextInt();
@@ -117,12 +117,12 @@ public class Main {
         int numbersecond=input.nextInt();
         if(numberfrist!=numbersecond  ){
             System.out.println(numberfrist+" != "+numbersecond);
-        } else if (numberfrist<numbersecond) {
+        } if (numberfrist<numbersecond) {
             System.out.println(numberfrist+" < "+numbersecond);
-        } else if (numberfrist<=numbersecond) { System.out.println(numberfrist+" <= "+numbersecond);
-
+        }  if (numberfrist<=numbersecond) { System.out.println(numberfrist+" <= "+numbersecond);
         }
 
+//
         // sol-12
         System.out.print("Input seconds: ");
         int totalSeconds = input.nextInt();
@@ -192,47 +192,39 @@ public class Main {
         System.out.println("Reversed number: " + reversedNumber);
 
         //sol-17
-        int
-        largest = Integer.MIN_VALUE;
-        int smallest = Integer.MAX_VALUE;
 
-
-        System.out.println("Enter numbers (enter -1 to stop):");
-
-        while (true) {
-            int number = input.nextInt();
-
-            if (number == -1) {
-                break;
+        System.out.println("enter the try number : ");
+        int nn = input.nextInt();
+        int nn1;
+        int small = Integer.MAX_VALUE;
+        int large = Integer.MIN_VALUE;
+        for (int n = 1; n <= nn; n++) {
+            System.out.println("enter the number :");
+            nn1 = input.nextInt();
+            if (nn1 > large) {
+                large = nn1;
             }
-
-            if (number > largest) {
-                largest = number;
-            }
-
-            if (number < smallest) {
-                smallest = number;
-
+            if (nn1 < small) {
+                small = nn1;
             }
         }
+            System.out.println("the large number : " + large);
+            System.out.println("the small number : " + small);
 
-        System.out.println("The largest number: " + largest);
-        System.out.println("The smallest number: " + smallest);
 
-        //sol-18
-        System.out.println("Enter a string:");
-        String inputStringg = input.nextLine();
-        int count = 0;
+            //sol-18
+            System.out.println("Enter a string:");
+            String inputStringg = input.nextLine();
+            int count = 0;
 
-        for (char c : inputStringg.toCharArray()) {
-            if (c == 'a' || c == 'A') {
-                count++;
+            for (char c : inputStringg.toCharArray()) {
+                if (c == 'a' || c == 'A') {
+                    count++;
+                }
             }
+
+            System.out.println("Number of 'a's: " + count);
+
+
         }
-
-        System.out.println("Number of 'a's: " + count);
-
-
-
     }
-}
